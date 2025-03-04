@@ -1,0 +1,710 @@
+@prefix : <https://w3id.org/emmo/domain/coating#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix emmo: <https://w3id.org/emmo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix electrochemistry: <https://w3id.org/emmo/domain/electrochemistry#> .
+@base <https://w3id.org/emmo/domain/coating#> .
+
+<https://w3id.org/emmo/domain/coating> rdf:type owl:Ontology ;
+                                            owl:imports <https://w3id.org/emmo/1.0.0-beta7/emmo> ,
+                                                        <https://w3id.org/emmo/domain/electrochemistry/0.11.0-beta/electrochemistry> ;
+                                            dcterms:contributor " AirBus"@en ,
+                                                                " Elsyca"@en ,
+                                                                " NTNU"@en ,
+                                                                "SINTEF"@en ;
+                                            dcterms:creator " Francesca L. Bleken"@en ,
+                                                            " Heinz Preisig"@en ,
+                                                            " Jesper Friis"@en ,
+                                                            " Peter Meuris"@en ,
+                                                            " Peter Visser"@en ,
+                                                            "Zoi Kefallinou"@en ;
+                                            dcterms:title "Coating ontology"@en ;
+                                            owl:versionInfo "v0.0.1"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_0307ebb5-14e4-5201-963c-b3268f01338f
+:EMMO_0307ebb5-14e4-5201-963c-b3268f01338f rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_68498a46-6f3c-531e-ad59-4934a4b4e8f1 ;
+                                           rdfs:comment "This treatment can also be used for the chemical conversion process"@en ;
+                                           skos:prefLabel "AlkalineCleaning"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The step in the anodising process after solvent cleaning and before alkaline etching aiming to remove any residual surface contaminants. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_05f8ff06-ea4e-5646-b939-dbe9b815b556
+:EMMO_05f8ff06-ea4e-5646-b939-dbe9b815b556 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_0650c031_42b6_4f0a_b62d_d88f071da6bf ;
+                                           rdfs:comment "Is wettability just a qualitative quantity, or does it has a quantitative definition (like 1/WettingAngle)?"@en ;
+                                           skos:prefLabel "Wettability"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The ability of a coating wet film to offer coverage over a metallic surface based on surface energies. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_07b68f21-77a5-5464-8503-3ec41f4009c7
+:EMMO_07b68f21-77a5-5464-8503-3ec41f4009c7 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_53971222-d221-5b73-86c5-65f50dbd0580 ;
+                                           rdfs:comment "This treatment can also be used for the chemical conversion process"@en ;
+                                           skos:prefLabel "Rinsing"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Step required between different immersion baths used in the anodising process to ensure no bath cross-contamination. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_0d7033cc-486b-5202-893e-34bcbefa306b
+:EMMO_0d7033cc-486b-5202-893e-34bcbefa306b rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52 ;
+                                           skos:prefLabel "DryFilm"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A coating that is dry or cured."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_0dbdf039-ac8e-547e-842a-45b13dc7e9b6
+:EMMO_0dbdf039-ac8e-547e-842a-45b13dc7e9b6 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_53971222-d221-5b73-86c5-65f50dbd0580 ;
+                                           rdfs:comment "This treatment can also be used for the chemical conversion process"@en ;
+                                           skos:prefLabel "Pickling"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Pickling is a metal surface treatment used to remove impurities, such as stains, inorganic contaminants, and rust or scale from ferrous metals, copper, precious metals and aluminum alloys. A solution called pickle liquor, which usually contains acid, is used to remove the surface impurities. In the anodising process, step after alkaline etching. To remove alloying elements from the substrate surface that are insoluble in alkaline etching step."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_0dddaeef-245d-5110-923d-99214e2f2f68
+:EMMO_0dddaeef-245d-5110-923d-99214e2f2f68 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac ;
+                                           skos:prefLabel "DefectWidth"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The width of a coating defect."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_0f64d7ec-4791-56b2-900d-6f72a34e1d15
+:EMMO_0f64d7ec-4791-56b2-900d-6f72a34e1d15 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 ,
+                                                           emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty [ owl:inverseOf emmo:EMMO_e1097637_70d2_4895_973f_2396f04fa204
+                                                                            ] ;
+                                                             owl:allValuesFrom :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52
+                                                           ] ;
+                                           skos:prefLabel "CoatingVolume"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The volume of the wet or dry coating."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1339e092-3829-535f-906d-7e9769cfbcba
+:EMMO_1339e092-3829-535f-906d-7e9769cfbcba rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_a293f923_954c_4af5_9f97_9600ebd362cb ;
+                                           rdfs:comment "usually this is formulated by PVC or % by weight( of the dry paintfilm"@en ;
+                                           skos:prefLabel "InhibitorConcentration"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Concentration of an inhibitor in the coating "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1680653f-295a-520d-9d41-c4d2130dbfa3
+:EMMO_1680653f-295a-520d-9d41-c4d2130dbfa3 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_752e0f30-433e-526c-a420-f237e9d97de4 ;
+                                           rdfs:comment "Scribe defects are introduced in an automated manner to ensure reproducibility. The defect is always through the whole coating system."@en ;
+                                           skos:altLabel " Scratch"@en ,
+                                                         "MechanicalCoatingDefect"@en ;
+                                           skos:prefLabel "Scribe"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Mechanically introduced geometrical defect."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Scribe can go to or into the metal substrate."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1803c6ee-25a3-58ea-ab8a-c85a706a71c1
+:EMMO_1803c6ee-25a3-58ea-ab8a-c85a706a71c1 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_68498a46-6f3c-531e-ad59-4934a4b4e8f1 ;
+                                           rdfs:comment "the conversion coating process can have similar steps"@en ;
+                                           skos:prefLabel "SurfaceTreatmentProcess"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The steps required to achieve a surface treatment such as anodising"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_180fea93-6390-53ae-9040-21017485fb61
+:EMMO_180fea93-6390-53ae-9040-21017485fb61 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_a62d07eb-90da-583a-bf6b-2c92f6536350 ;
+                                           skos:prefLabel "ActivePigment"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A pigment with an active chemical function."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1823207d-297e-56c6-9c19-f325c27d5c28
+:EMMO_1823207d-297e-56c6-9c19-f325c27d5c28 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ;
+                                           skos:altLabel "Fungicide? Biocide?"@en ;
+                                           skos:prefLabel "Preservative"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An additive used to protect against bacterial and fungal growth"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_19a13bb9-8f76-59c1-aafd-c4ed6cb1193f
+:EMMO_19a13bb9-8f76-59c1-aafd-c4ed6cb1193f rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 ,
+                                                           emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac ;
+                                           rdfs:comment "this is the coating system"@en ;
+                                           skos:altLabel "CoatThickness"@en ;
+                                           skos:prefLabel "CoatingThickness"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Thickness of the overall primer and topcoat layers"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1b5c6092-a34a-5c85-8a97-c67d5c22e80e
+:EMMO_1b5c6092-a34a-5c85-8a97-c67d5c22e80e rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_1e877c70_3b01_45a8_a8f6_8ce4f6a24660 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_a8bd7094_6b40_47af_b1f4_a69d81a3afbd ;
+                                                             owl:someValuesFrom :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52
+                                                           ] ;
+                                           skos:prefLabel "CoatingDefectPartOfCoating"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coating defect that is part of the coating."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352
+:EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953 ;
+                                           skos:prefLabel "Additive"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Chemical compound that alters performance charactistics (e.g. flow characteristics, adhesion, wetting, dispersion, catalysts)."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_1fa3d50f-ec5e-58e4-b61a-b9dfc93c08f9
+:EMMO_1fa3d50f-ec5e-58e4-b61a-b9dfc93c08f9 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1803c6ee-25a3-58ea-ab8a-c85a706a71c1 ;
+                                           rdfs:comment "resulting in a very thin coating layer"@en ;
+                                           skos:prefLabel "SolGelCoating"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """A type of SurfaceTreatmentProcess. The process includes settling of nm sized particles from a colloidal suspension onto a pre-existing surface, resulting in ceramic materials. 
+"""@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_24b70cb5-a7c9-5bb5-b672-f3f068fb8a41
+:EMMO_24b70cb5-a7c9-5bb5-b672-f3f068fb8a41 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 ,
+                                                           emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac ;
+                                           skos:prefLabel "TopcoatThickness"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Thickness of the topcoat layer."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_26068e76-c6ac-501d-8105-0bbc46df434e
+:EMMO_26068e76-c6ac-501d-8105-0bbc46df434e rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_38d65ffa_353f_4820_8781_ff986b63e517 ;
+                                           rdfs:comment "mg/L or g/100 ml"@en ;
+                                           skos:prefLabel "ElectrolyteSolubility"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The solubility of a substance in the electrolyte."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_275d646d-3610-55fd-92b4-4a486d2a87e9
+:EMMO_275d646d-3610-55fd-92b4-4a486d2a87e9 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ;
+                                           skos:prefLabel "Defoamer"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An additive used in coatings aiming to reduce the amount of foaming or bubbles formation in the mixing and application of the wet film that may appear as coating defects once the coating film has dried. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_2a520910-4c56-5cc8-98ff-bf97f9327664
+:EMMO_2a520910-4c56-5cc8-98ff-bf97f9327664 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b ;
+                                           rdfs:comment "is this true?  The diffusion coefficient has to do with the how fast a species is travelling"@en ;
+                                           skos:prefLabel "ElectrolyteDiffusionCoefficient"@en ;
+                                           emmo:EMMO_8de5d5bf_db1c_40ac_b698_095ba3b18578 "9-39"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Measure of how fast the solubility is obtained based on Fick's law"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5
+:EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_ab4a4d30-3b04-5ef3-b8b7-8c24abc05324
+                                                                               :EMMO_f8902740-2aca-5f08-bdce-13daea7df4e6
+                                                                             )
+                                                               ] ;
+                                           rdfs:subClassOf :EMMO_a62d07eb-90da-583a-bf6b-2c92f6536350 ;
+                                           rdfs:comment " The corrosion inhibitor cromate ion can be added as e.g. a SrCrO4 pigment"@en ,
+                                                        "This can be a particle, like a pigment  or an organic molecule. "@en ;
+                                           skos:altLabel "CorrosionInhibitor"@en ;
+                                           skos:prefLabel "Inhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Compound that delays corrosion development by means of blocking parts of the surface. "@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Benzotriazole is an example of an organic inhibitor."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_3c7877cd-2551-5c21-a47b-ed49236b0852
+:EMMO_3c7877cd-2551-5c21-a47b-ed49236b0852 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_53971222-d221-5b73-86c5-65f50dbd0580 ;
+                                           rdfs:comment "This treatment can also be used for the chemical conversion process"@en ;
+                                           skos:prefLabel "Etching"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The step in the anodising process for creating an etched metallic surface. Before aluminium anodising, alkaline etching is used to remove the mechanically deformed layer, oxides and rolling residuals before acidic etching. Followed by acidic etching, for the elimination of remaining contaminants and chemical elements on the metalic surface such as copper.  "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_44901a54-f1f3-5fee-81a5-5665845ea502
+:EMMO_44901a54-f1f3-5fee-81a5-5665845ea502 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 ,
+                                                           emmo:EMMO_a66427d1_9932_4363_9ec5_7d91f2bfda1e ;
+                                           rdfs:comment "delete this one, lets normalize on Inhibitor efficiency"@en ;
+                                           skos:prefLabel "InhibitorPower"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Measure of  the metallic corrosion rate in the presence of an inhibitor with respect to the corrosion rate of the same metal in the absence of inhibitors. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_4586c758-8724-553e-bf46-d79f556e1e8d
+:EMMO_4586c758-8724-553e-bf46-d79f556e1e8d rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 ;
+                                                             owl:someValuesFrom :EMMO_c6353440-2337-5fa4-875e-1889743dde8f
+                                                           ] ;
+                                           skos:prefLabel "PrecipitationInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Forms a protective film on the metal surface"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_50c6149d-fb34-570f-b79a-b56feb179c6f
+:EMMO_50c6149d-fb34-570f-b79a-b56feb179c6f rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 ;
+                                           skos:altLabel " Binder"@en ,
+                                                         "Resin"@en ;
+                                           skos:prefLabel "Polymer"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Substance or material consisting of many repeating subunits (wikipedia)"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_53971222-d221-5b73-86c5-65f50dbd0580
+:EMMO_53971222-d221-5b73-86c5-65f50dbd0580 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1803c6ee-25a3-58ea-ab8a-c85a706a71c1 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_bbe1faeb-fe76-5e9d-b6ed-05f47d409301
+                                                           ] ;
+                                           rdfs:comment "May leave a pretreatment layer, but not always."@en ;
+                                           skos:prefLabel "Pretreatment"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Process before coating to prepare surface which may or may not leave a pretreatment layer."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Cleaning, anodising, mechanical brushing, …"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_57319c14-ade9-5575-b583-3e12e899fd8c
+:EMMO_57319c14-ade9-5575-b583-3e12e899fd8c rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_1e877c70_3b01_45a8_a8f6_8ce4f6a24660 ;
+                                           skos:prefLabel "CoatingMicrostructure"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The distribution of the pigments, inhibitors, additives, extenders, fillers, fibres, reinforcing particles in the polymer matrix."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_5d2c0061-51cc-5e25-91a8-97a687876a1d
+:EMMO_5d2c0061-51cc-5e25-91a8-97a687876a1d rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_43e9a05d_98af_41b4_92f6_00f79a09bfce ;
+                                           skos:prefLabel "Leaching"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Release of a chemical compound out of a material measured by mass transport"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_63d005d0-5f66-50cd-baa5-a87fb100282d
+:EMMO_63d005d0-5f66-50cd-baa5-a87fb100282d rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f ;
+                                                             owl:someValuesFrom emmo:EMMO_4e659c69_ca2d_4569_8a96_f99857a1fa32
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f ;
+                                                             owl:someValuesFrom emmo:EMMO_704630b8_fee3_49b9_baca_40e2dd276370
+                                                           ] ;
+                                           skos:prefLabel "HybridInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Inhibitor based on organic and inorganic inhibitors"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_65533aa3-4793-5720-8e00-1e1034f970fe
+:EMMO_65533aa3-4793-5720-8e00-1e1034f970fe rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_91a78333-99da-5f5e-af5a-a32ea4307068 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty [ owl:inverseOf emmo:EMMO_65a2c5b8_e4d8_4a51_b2f8_e55effc0547d
+                                                                            ] ;
+                                                             owl:someValuesFrom :EMMO_91a78333-99da-5f5e-af5a-a32ea4307068
+                                                           ] ;
+                                           rdfs:comment "The pH of the film initially. This is considered homogenous before the process starts."@en ;
+                                           skos:altLabel "InitialElectrolytepH"@en ;
+                                           skos:prefLabel "InitialWaterFilmpH"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The pH of the water film before exposure to the sample."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_68498a46-6f3c-531e-ad59-4934a4b4e8f1
+:EMMO_68498a46-6f3c-531e-ad59-4934a4b4e8f1 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_a633c6f8_4269_4870_9b28_f5ca1783fd54 ,
+                                                           emmo:EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty [ owl:inverseOf emmo:EMMO_9ee42d6b_7242_4a8d_967e_79f8f1c7fe29
+                                                                            ] ;
+                                                             owl:someValuesFrom emmo:EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b
+                                                           ] ;
+                                           skos:prefLabel "ManufacturingStep"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A step in a manufacturing process. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0
+:EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_79751276_b2d0_4e2f_bbd4_99d412f43d55 ;
+                                           skos:prefLabel "CoatingQuantity"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Physical quantities for describing coatings."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_6df244b7-3f53-5ca5-a694-030ac665e062
+:EMMO_6df244b7-3f53-5ca5-a694-030ac665e062 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 ,
+                                                           emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac ;
+                                           skos:prefLabel "PrimerThickness"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Thickness of the primer layer."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_7502b05a-dff4-5018-a45c-2d16c857c3d4
+:EMMO_7502b05a-dff4-5018-a45c-2d16c857c3d4 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac ;
+                                           rdfs:comment "Considered from the top of the coating, i.e. not from bottom of scratch"@en ;
+                                           skos:altLabel "ElectrolyteThickness"@en ;
+                                           skos:prefLabel "WaterFilmThickness"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The thickness of a continous water film measure from the top of the surface of the coating."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_752c46cb-09f4-549b-91bf-2ac8c9619194
+:EMMO_752c46cb-09f4-549b-91bf-2ac8c9619194 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ;
+                                           rdfs:comment "The elucidation describes the role, but not what a LightStabilisor is. Is it an additive?"@en ;
+                                           skos:prefLabel "LightStabilisor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Reduces the coating's sensitivity to UV radiation."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_752e0f30-433e-526c-a420-f237e9d97de4
+:EMMO_752e0f30-433e-526c-a420-f237e9d97de4 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_1e877c70_3b01_45a8_a8f6_8ce4f6a24660 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 ;
+                                                             owl:someValuesFrom :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52
+                                                           ] ;
+                                           skos:prefLabel "CoatingDefectNotPartOfCoating"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coating defect that is not part of the coating."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_76a6d6c3-7870-545a-afd5-ccf121e3c74d
+:EMMO_76a6d6c3-7870-545a-afd5-ccf121e3c74d rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52 ;
+                                           rdfs:comment "Provides color and additional protection. It can protect the primer and/or have a decorating effect."@en ;
+                                           skos:prefLabel "TopCoat"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Barrier layer to stop inhibitor leaching out of the coating system."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_7812ed1b-5b63-5df8-8bc3-2c8a01c71bca
+:EMMO_7812ed1b-5b63-5df8-8bc3-2c8a01c71bca rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ;
+                                           skos:prefLabel "AdsorptionInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An inhibitor that functions through adsorption."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_7c5362d7-5a28-5551-b483-543069fc7b52
+:EMMO_7c5362d7-5a28-5551-b483-543069fc7b52 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f ;
+                                                             owl:someValuesFrom :EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953
+                                                           ] ;
+                                           rdfs:comment "Typically a dry film. This is a layer added on top of the pretreatment or another coating layer."@en ;
+                                           skos:altLabel " CoatingFilm"@en ,
+                                                         " CoatingMatrix"@en ,
+                                                         "CoatingLayer"@en ;
+                                           skos:prefLabel "Coating"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A single layer of a cured formulation consisting of polymers, pigments and additives. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_7ddcee10-e982-5390-915e-e4d34e0b70da
+:EMMO_7ddcee10-e982-5390-915e-e4d34e0b70da rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953 ;
+                                           rdfs:comment "Can be both physical and chemical. Usually anything that does provides colours or corrosion protection."@en ;
+                                           skos:altLabel "Extender"@en ;
+                                           skos:prefLabel "Filler"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Chemical compound that alters density and performance characteristics but has no active or coloristic function."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Fumed silica particles"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_8b2f13fd-218d-50f6-8046-baa6a954a438
+:EMMO_8b2f13fd-218d-50f6-8046-baa6a954a438 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f ;
+                                                             owl:allValuesFrom :EMMO_50c6149d-fb34-570f-b79a-b56feb179c6f
+                                                           ] ;
+                                           owl:disjointWith :EMMO_bb053618-8a17-5ba4-953b-fd8ad57641b7 ;
+                                           rdfs:comment "Can be made by combining a resin and a curing agent."@en ;
+                                           skos:prefLabel "PolymerMatrix"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The volume of the (cross-linked) polymer that binds all the other constituents. This is only the polymer/organic resin."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_8c6bb938-58f3-5838-aba8-9d5620f67c19
+:EMMO_8c6bb938-58f3-5838-aba8-9d5620f67c19 rdf:type owl:Class ;
+                                           rdfs:subClassOf electrochemistry:electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59 ;
+                                           rdfs:comment " "@en ;
+                                           skos:altLabel "Electrolyte"@en ;
+                                           skos:prefLabel "WaterFilm"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Water film that act as an electrolyte, e.g. tranports ions to the surface necessary for corrosion."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_91a78333-99da-5f5e-af5a-a32ea4307068
+:EMMO_91a78333-99da-5f5e-af5a-a32ea4307068 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_02c0621e_a527_4790_8a0f_2bb51973c819 ;
+                                           skos:altLabel "ElectrolytepH"@en ;
+                                           skos:prefLabel "WaterFilmpH"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The pH of the water film."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_93e312f4-30da-58d1-b3ba-c827bb2ecb57
+:EMMO_93e312f4-30da-58d1-b3ba-c827bb2ecb57 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ;
+                                           skos:altLabel "DryingAgent"@en ;
+                                           skos:prefLabel "Catalyst"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An additive used to accelerate the curing reaction of the coating wet film.  "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_9e878210-53b8-5b8f-bd52-9e5da3c2b454
+:EMMO_9e878210-53b8-5b8f-bd52-9e5da3c2b454 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_e884ed76-5ed5-5bcf-b020-b393c6436d35 ;
+                                           rdfs:comment "corrosion protective primer"@en ;
+                                           skos:prefLabel "ActiveProtectivePrimer"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coating layer containing inhibitor."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_a62d07eb-90da-583a-bf6b-2c92f6536350
+:EMMO_a62d07eb-90da-583a-bf6b-2c92f6536350 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953 ;
+                                           rdfs:comment " The pigments influence on the opacity is important for the final product."@en ,
+                                                        "An example of active function is corrosion inhibition."@en ;
+                                           skos:prefLabel "Pigment"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Pigments are particles in a coating that can provide color and/or have an active function."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_ab4a4d30-3b04-5ef3-b8b7-8c24abc05324
+:EMMO_ab4a4d30-3b04-5ef3-b8b7-8c24abc05324 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_4e659c69_ca2d_4569_8a96_f99857a1fa32 ;
+                                           skos:prefLabel "InorganicInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An inorganic based inhibitor."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_b3403cc6-3f77-5058-8dc6-4e7c68a9210d
+:EMMO_b3403cc6-3f77-5058-8dc6-4e7c68a9210d rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac ;
+                                           rdfs:comment "Into the metal"@en ;
+                                           skos:altLabel "DefectThickness"@en ;
+                                           skos:prefLabel "DefectDepth"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The depth of a coating defect."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_b3eb2185-cd49-5788-8df0-4506a00ec8f7
+:EMMO_b3eb2185-cd49-5788-8df0-4506a00ec8f7 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6b4a2050-92f7-5169-b2b9-f8731fa2e1b0 ,
+                                                           emmo:EMMO_faab3f84_e475_4a46_af9c_7d249f0b9aef ;
+                                           skos:prefLabel "InhibitorEfficiency"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Measure of  the metallic corrosion rate in the presence of an inhibitor with respect to the corrosion rate of the same metal in the absence of any inhibitors.  "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_b4e7a4c7-3252-5a12-89af-4e18b39abf9a
+:EMMO_b4e7a4c7-3252-5a12-89af-4e18b39abf9a rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_e884ed76-5ed5-5bcf-b020-b393c6436d35 ;
+                                           skos:prefLabel "BarrierPrimerCoating"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coating layer designed to act as a barrier."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_b4f51f81-2c78-506e-b5df-64ce6b77d02c
+:EMMO_b4f51f81-2c78-506e-b5df-64ce6b77d02c rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_b9522e56_1fac_4766_97e6_428605fabd3e ,
+                                                           emmo:EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f ;
+                                                             owl:someValuesFrom :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52
+                                                           ] ;
+                                           rdfs:comment "All volatile materials have evaporated."@en ;
+                                           skos:prefLabel "CoatingSystem"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Consists of multiple layers of coating (at least one)."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_b500c947-540d-52e2-a3e1-6b485c2ec8b5
+:EMMO_b500c947-540d-52e2-a3e1-6b485c2ec8b5 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ;
+                                           rdfs:comment "can be removed, drying agents are in general used in Deco paints … in principle these are catalysts"@en ;
+                                           skos:prefLabel "DryingAgent"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An additive used to accelarate thecuring reaction of the coating wet film.  "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_b91c74d9-cf7b-526d-8d30-028a5791b315
+:EMMO_b91c74d9-cf7b-526d-8d30-028a5791b315 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ;
+                                           rdfs:comment "Mg metal or Zn metal or Al metal that sacrifically protects the surface due to their lower nobelity. Highly pigmented coatings that need close contact for electrical conductivity to sacrificial inhibitor. "@en ;
+                                           skos:prefLabel "SacrificialInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Sacrificially protect the surface due to galvanic potential. Anodic reaction is diplaced to the coating. "@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Galvanized steel. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_bb053618-8a17-5ba4-953b-fd8ad57641b7
+:EMMO_bb053618-8a17-5ba4-953b-fd8ad57641b7 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_aa987900_caf1_4ce2_82fa_6b1d6fbd2ead ;
+                                                             owl:someValuesFrom :EMMO_8b2f13fd-218d-50f6-8046-baa6a954a438
+                                                           ] ;
+                                           skos:prefLabel "NonVolatileAdditive"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An additive that remains in the coating, but at very low concentrations."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "DispersingAdditive"@en ,
+                                                                                          "WettingAdditive"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_bbe1faeb-fe76-5e9d-b6ed-05f47d409301
+:EMMO_bbe1faeb-fe76-5e9d-b6ed-05f47d409301 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_8b0923ab_b500_477b_9ce9_8b3a3e4dc4f2 ;
+                                           skos:prefLabel "PretreatedSurface"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Output of SurfaceTreatmentProcess"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_c5a7e6df-7be9-5fd3-ac58-35514108cb8e
+:EMMO_c5a7e6df-7be9-5fd3-ac58-35514108cb8e rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_a293f923_954c_4af5_9f97_9600ebd362cb ;
+                                           skos:altLabel "ElectrolyteSalinity"@en ;
+                                           skos:prefLabel "WaterFilmSalinity"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The concentration of salts in a liquid."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_c61af324-d279-572f-8969-0068a6771524
+:EMMO_c61af324-d279-572f-8969-0068a6771524 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_1e877c70_3b01_45a8_a8f6_8ce4f6a24660 ,
+                                                           [ rdf:type owl:Class ;
+                                                             owl:unionOf ( :EMMO_1b5c6092-a34a-5c85-8a97-c67d5c22e80e
+                                                                           :EMMO_752e0f30-433e-526c-a420-f237e9d97de4
+                                                                         )
+                                                           ] ;
+                                           rdfs:comment "Data in EMMO a causal object with spatial variations that can be interpreted."@en ;
+                                           skos:prefLabel "CoatingDefect"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A break in the continuity of the coating film."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "crack, scribe, scratch, hole, pore"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_c6353440-2337-5fa4-875e-1889743dde8f
+:EMMO_c6353440-2337-5fa4-875e-1889743dde8f rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 ;
+                                           skos:prefLabel "Substrate"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The material on which the coating is deposited with or without a pretreatment process."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_c7386dab-78e1-5e5a-a22c-11c1e8c6bf53
+:EMMO_c7386dab-78e1-5e5a-a22c-11c1e8c6bf53 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ;
+                                           skos:prefLabel "AnodicInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An inhibitor that suppresses the anodic reaction."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_caf6e2e5-87c1-564b-97a4-fe77753ac30f
+:EMMO_caf6e2e5-87c1-564b-97a4-fe77753ac30f rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_68498a46-6f3c-531e-ad59-4934a4b4e8f1 ;
+                                           rdfs:comment "Solvent cleaning is a general term used before a coating or pretreatment is applied"@en ;
+                                           skos:prefLabel "SolventCleaning"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The first in the anodising process to remove significant contaminants of the surface of the metal such as oils, greases. "@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_ce13093d-d998-53ee-a2a9-4128185b2fa8
+:EMMO_ce13093d-d998-53ee-a2a9-4128185b2fa8 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_a293f923_954c_4af5_9f97_9600ebd362cb ;
+                                           rdfs:comment "additives such as matting agents contribute to the PVC as well"@en ;
+                                           skos:altLabel "PVC"@en ;
+                                           skos:prefLabel "PigmentVolumeConcentration"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The volume of the pigments (corrosion inhibitors) and (fillers)extenders and certain additives in the total volume of dry paint film."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_d2f0aa3a-1995-541e-8148-0af4770b6738
+:EMMO_d2f0aa3a-1995-541e-8148-0af4770b6738 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ;
+                                           skos:prefLabel "CathodicInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An inhibitor that suppresses the cathodic reaction."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_d2f83288-896e-571e-b800-8c4f0311e885
+:EMMO_d2f83288-896e-571e-b800-8c4f0311e885 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_8b0923ab_b500_477b_9ce9_8b3a3e4dc4f2 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass emmo:EMMO_8b0923ab_b500_477b_9ce9_8b3a3e4dc4f2
+                                                           ] ;
+                                           skos:altLabel "Boundary"@en ;
+                                           skos:prefLabel "Interface"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The boundary region where two different materials or electrolytes meet and may interact with a specific thickness, capacitance, resistance."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953
+:EMMO_d5f2346e-ee0b-5a17-944a-33b2f7d0f953 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_ceaaf9f7_fd11_424b_8fda_9afa186af186 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_a8bd7094_6b40_47af_b1f4_a69d81a3afbd ;
+                                                             owl:allValuesFrom :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52
+                                                           ] ;
+                                           rdfs:comment "Does not include the solvents that are used during preparation, but that evaporate and do not remain as constitutents in the cured coating."@en ;
+                                           skos:prefLabel "CoatingConstituent"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Part of the dry coating."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a " Additive"@en ,
+                                                                                          " Extender"@en ,
+                                                                                          " Filler"@en ,
+                                                                                          " Pigment"@en ,
+                                                                                          " Resin"@en ,
+                                                                                          "Polymer"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_d8f1c2bf-2438-5964-b350-c441a6fdbee1
+:EMMO_d8f1c2bf-2438-5964-b350-c441a6fdbee1 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_a62d07eb-90da-583a-bf6b-2c92f6536350 ;
+                                           skos:prefLabel "ColourPigment"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A pigment providing color."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_e2e32dee-ea29-5c99-9d6c-5ba37da2f89d
+:EMMO_e2e32dee-ea29-5c99-9d6c-5ba37da2f89d rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_3a85fcae-d2f2-587c-8c94-422316902dc5 ;
+                                           skos:prefLabel "MixedInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An inhibitor that suppresses the reaction at both anodic and cathodic side."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_e884ed76-5ed5-5bcf-b020-b393c6436d35
+:EMMO_e884ed76-5ed5-5bcf-b020-b393c6436d35 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_7c5362d7-5a28-5551-b483-543069fc7b52 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :EMMO_c6353440-2337-5fa4-875e-1889743dde8f
+                                                                                                :EMMO_ea87e032-3583-510a-a194-3632fabc350d
+                                                                                              )
+                                                                                ]
+                                                           ] ;
+                                           rdfs:comment " A primer does not have to contain corrosion inhibitor, but may do so. "@en ,
+                                                        "The first coating layer"@en ;
+                                           skos:altLabel "Primer"@en ;
+                                           skos:prefLabel "PrimerCoating"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coating layer containing added directly on the pretreatment layer or directly to the substrate."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_ea87e032-3583-510a-a194-3632fabc350d
+:EMMO_ea87e032-3583-510a-a194-3632fabc350d rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :EMMO_c6353440-2337-5fa4-875e-1889743dde8f
+                                                                                                :EMMO_ea87e032-3583-510a-a194-3632fabc350d
+                                                                                              )
+                                                                                ]
+                                                           ] ;
+                                           rdfs:comment " Most of the time they do not have an active protection."@en ,
+                                                        " Ususally to improve coating adhesion to substrate"@en ,
+                                                        "May be formed by e.g. anodising. "@en ;
+                                           skos:prefLabel "PretreatmentLayer"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Layer that is formed by pretreatment to optimize the interface between the metal and the coating system."@en ;
+                                           emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a " chemical conversion coating"@en ,
+                                                                                          " solgelcoatings"@en ,
+                                                                                          "anodic layer"@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_f4702583-3a0f-54f1-a61d-45fae4d860a8
+:EMMO_f4702583-3a0f-54f1-a61d-45fae4d860a8 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_1f962da8-6f0e-5771-a1f5-400a0c71d352 ;
+                                           skos:prefLabel "RheologyAgent"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An additive used to control the rheological characteristic of the coating wet film, such as the viscosity, paint stability, shelf-life."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_f77b0ff3-c512-5bb8-b7db-87b876e70a46
+:EMMO_f77b0ff3-c512-5bb8-b7db-87b876e70a46 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_53971222-d221-5b73-86c5-65f50dbd0580 ;
+                                           skos:altLabel "Anodising"@en ;
+                                           skos:prefLabel "Anodizing"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An electrochemical process that converts microstructure of the metal surface into an anodic oxide finish that consists of a barrier layer, offering corrosion protection, and a layer of micropores, offering paint adhesion."@en .
+
+
+###  https://vipcoat-oip.com/coating-ontology#EMMO_f8902740-2aca-5f08-bdce-13daea7df4e6
+:EMMO_f8902740-2aca-5f08-bdce-13daea7df4e6 rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_704630b8_fee3_49b9_baca_40e2dd276370 ;
+                                           skos:prefLabel "OrganicInhibitor"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An organic based inhibitor."@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

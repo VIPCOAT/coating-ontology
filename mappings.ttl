@@ -1,0 +1,21 @@
+@prefix micro: <https://w3id.org/emmo/domain/microstructure#> .
+@prefix map: <https://w3id.org/emmo/domain/mappings#> .
+@prefix emmo: <https://w3id.org/emmo#> .
+@prefix coating: <https://w3id.org/emmo/domain/coating#> .
+@prefix app: <https://vipcoat-oip.com/vipcoat-application-ontology#> .
+@prefix droptest: <http://onto-ns.com/meta/0.1/DropTest#> .
+@prefix miotras: <http://onto-ns.com/meta/0.1/Miotras#> .
+
+droptest:ph_intitial map:mapsTo app:PHInitial .
+droptest:ph_S1 map:mapsTo app:PHMeasuredAtTime .
+droptest:T map:mapsTo app:Tarnishing .
+droptest:C map:mapsTo app:CorrosionProduct .
+droptest:D map:mapsTo app:BlackSpotFormation .
+
+miotras:x map:mapsTo app:XCoordinateOfAnalysis .
+miotras:y map:mapsTo app:YCoordinateOfAnalysis .
+miotras:chem map:mapsTo emmo:ChemicalSpecies .
+miotras:ions_data map:mapsTo emmo:AmmountConcentration .
+miotras:U map:mapsTo app:ElectrolytePotential .
+miotras:J map:mapsTo emmo:ElectricCurrentDensity .
+miotras:rho map:mapsTo emmo:ElectricChargeDensity .
